@@ -1,0 +1,1 @@
+Basic bundler-agnostic scripts for build & distribution
