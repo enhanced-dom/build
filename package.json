@@ -1,6 +1,6 @@
 {
   "name": "@enhanced-dom/build",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Basic bundler-agnostic scripts for build & distribution",
   "keywords": [],
   "repository": "https://github.com/enhanced-dom/build.git",
@@ -18,16 +18,16 @@
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
-    "rimraf": "^5.0.5",
-    "yargs": "^17.7.2"
+    "rimraf": "^6.1.2",
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.19.13",
+    "@types/node": "^20.19.25",
     "@types/yargs": "^17.0.32",
     "typescript": "^5.3.3"
   },
   "engines": {
-    "node": ">=18",
+    "node": ">=20",
     "npm": ">=10"
   }
 }
