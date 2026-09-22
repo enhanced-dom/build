@@ -12,8 +12,7 @@
     "outDir": "dist",
     "noUncheckedIndexedAccess": true,
     "preserveConstEnums" : true,
-    "sourceMap": true,
-    "sourceRoot": "./",
+    "inlineSourceMap": true,
     "inlineSources": true
   },
   "include": [
