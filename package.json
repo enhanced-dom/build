@@ -1,6 +1,6 @@
 {
   "name": "@enhanced-dom/build",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Basic bundler-agnostic scripts for build & distribution",
   "keywords": [],
   "repository": "https://github.com/enhanced-dom/build.git",
@@ -11,7 +11,7 @@
   "scripts": {
     "prebuild": "rimraf dist/*",
     "build": "tsc -p ./tsconfig.json",
-    "postbuild": "copyfiles LICENSE.md README.md package.json dist && cp tsconfig.json dist/tsconfig.template.json",
+    "postbuild": "copyfiles LICENSE.md README.md dist && cp tsconfig.json dist/tsconfig.template.json && node dist/copyPackageJson.js --folder dist",
     "package": "cd dist && npm pack"
   },
   "bin": {
