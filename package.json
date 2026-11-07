@@ -1,6 +1,6 @@
 {
   "name": "@enhanced-dom/build",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Basic bundler-agnostic scripts for build & distribution",
   "keywords": [],
   "repository": "https://github.com/enhanced-dom/build.git",
@@ -12,11 +12,13 @@
     "prebuild": "rimraf dist/*",
     "build": "tsc -p ./tsconfig.json",
     "postbuild": "copyfiles LICENSE.md README.md dist && cp tsconfig.json dist/tsconfig.template.json && node dist/copyPackageJson.js --folder dist",
-    "package": "cd dist && npm pack"
+    "package": "cd dist && npm pack",
+    "test": "node --import tsx --test --experimental-test-coverage test/generateNotice.test.ts"
   },
   "bin": {
     "@enhanced-dom-copy-packagejson": "./copyPackageJson.js",
-    "@enhanced-dom-bootstrap-tsconfig": "./bootstrapTsconfig.js"
+    "@enhanced-dom-bootstrap-tsconfig": "./bootstrapTsconfig.js",
+    "@enhanced-dom-generate-notice": "./generateNoticeCli.js"
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
@@ -27,8 +29,10 @@
     "yargs": "^18.2.0"
   },
   "devDependencies": {
+    "@types/memory-fs": "^0.3.7",
     "@types/node": "^22.20.4",
-    "@types/yargs": "^17.0.35"
+    "@types/yargs": "^17.0.35",
+    "memory-fs": "^0.5.0"
   },
   "engines": {
     "node": ">=22.23.2",
